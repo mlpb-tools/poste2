@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiche RIO interactive</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+            color: #334155;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 1rem;
+        }
+        .card {
+            background-color: white;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #4F46E5, #8B5CF6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 1rem;
+            width: 90%;
+            max-width: 600px;
+            position: relative;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.25);
+        }
+        .close-button {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            color: #64748B;
+        }
+        .close-button:hover {
+            color: #334155;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-slate-700">
+<div class="container p-4 md:p-8">
+    <div class="text-center mb-12">
+        <h1 class="text-3xl md:text-5xl font-bold text-gradient">Fiche Fonctionnelle : Responsable Innovation, Professionnalisation & Outillage (RIO)</h1>
+        <p class="text-lg md:text-xl text-slate-500 mt-2">Mission Locale Pays Basque</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <!-- Rôle Stratégique -->
+        <div id="role-strategique" class="card bg-purple-100/50 hover:bg-purple-100">
+            <h2 class="text-2xl font-bold text-purple-700 mb-2">🎯 Rôle stratégique</h2>
+            <p class="text-slate-600">Le RIO est une fonction pivot, en lien direct avec la Direction et les équipes terrain, pour structurer l'accompagnement socio-professionnel.</p>
+        </div>
+        <!-- Attributions Stratégiques -->
+        <div id="attributions-strategiques" class="card bg-orange-100/50 hover:bg-orange-100">
+            <h2 class="text-2xl font-bold text-orange-700 mb-2">🌟 4 Attributions stratégiques</h2>
+            <p class="text-slate-600">Cliquez pour voir les quatre attributions principales qui guident les actions du RIO.</p>
+        </div>
+        <!-- Tâches principales -->
+        <div id="taches-principales" class="card bg-lime-100/50 hover:bg-lime-100">
+            <h2 class="text-2xl font-bold text-lime-700 mb-2">🛠️ Tâches principales</h2>
+            <p class="text-slate-600">Découvrez les missions concrètes et quotidiennes du poste, de l'ingénierie à l'animation.</p>
+        </div>
+        <!-- Interactions Direction -->
+        <div id="interactions-direction" class="card bg-indigo-100/50 hover:bg-indigo-100">
+            <h2 class="text-2xl font-bold text-indigo-700 mb-2">🤝 Interactions avec la Direction</h2>
+            <p class="text-slate-600">Le RIO est le lien stratégique avec la Direction. Voir les détails.</p>
+        </div>
+        <!-- Interactions Ambassadeurs -->
+        <div id="interactions-ambassadeurs" class="card bg-sky-100/50 hover:bg-sky-100">
+            <h2 class="text-2xl font-bold text-sky-700 mb-2">🤝 Interactions avec les Ambassadeurs</h2>
+            <p class="text-slate-600">Le RIO forme et s'appuie sur ce réseau pour diffuser les bonnes pratiques.</p>
+        </div>
+        <!-- Interactions Conseillers -->
+        <div id="interactions-conseillers" class="card bg-teal-100/50 hover:bg-teal-100">
+            <h2 class="text-2xl font-bold text-teal-700 mb-2">🤝 Interactions avec les Conseillers</h2>
+            <p class="text-slate-600">Le rôle du RIO dans l'accompagnement des conseillers CEJ/PACEA.</p>
+        </div>
+        <!-- Interactions SC/Stagiaires -->
+        <div id="interactions-stagiaires" class="card bg-fuchsia-100/50 hover:bg-fuchsia-100">
+            <h2 class="text-2xl font-bold text-fuchsia-700 mb-2">🤝 Interactions avec Volontaires SC & Stagiaires</h2>
+            <p class="text-slate-600">Comment le RIO collabore avec les jeunes en mission pour la capitalisation.</p>
+        </div>
+        <!-- Valeur Ajoutée -->
+        <div id="valeur-ajoutee" class="card bg-emerald-100/50 hover:bg-emerald-100 col-span-1 md:col-span-2 lg:col-span-1">
+            <h2 class="text-2xl font-bold text-emerald-700 mb-2">✅ Valeur ajoutée du poste</h2>
+            <p class="text-slate-600">Le RIO assure la durabilité et la professionnalisation des actions de l'organisation.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Modals for each section -->
+<!-- Modal Rôle Stratégique -->
+<div id="modal-role-strategique" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h3 class="text-2xl font-bold mb-4 text-gradient">🎯 Rôle stratégique</h3>
+        <p class="text-slate-600 mb-4">Le Responsable Innovation, Professionnalisation & Outillage (RIO) occupe une fonction pivot au sein de la Mission Locale, en articulation directe avec la Direction et les relais territoriaux.</p>
+        <p class="text-slate-600">Il assume une mission transversale de structuration, outillage et professionnalisation de l’accompagnement socio-professionnel, en cohérence avec la feuille de route nationale (UNML, CEJ/PACEA, Pacte d’Ambition) et les opportunités offertes par les financements européens (Erasmus+, FSE+, POCTEFA).</p>
+    </div>
+</div>
+<!-- Modal Attributions Stratégiques -->
+<div id="modal-attributions-strategiques" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h3 class="text-2xl font-bold mb-4 text-gradient">🌟 4 Attributions stratégiques</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-600">
+            <li><strong>Conception et capitalisation des outils d’accompagnement :</strong> transformation des projets expérimentaux en livrables duplicables (fiches, grilles, capsules, carnets de capitalisation).</li>
+            <li><strong>Garantie de la professionnalisation interne :</strong> animation de sessions collectives, organisation d’ateliers-sprints, transmission de bonnes pratiques, intégration de l’approche compétences (Life Skills, ADVP, CEP 2.0).</li>
+            <li><strong>Intégration systématique des projets européens dans le droit commun CEJ/PACEA :</strong> obligation d’inclure au moins un outil innovant dans chaque parcours jeune (diagnostic mobilité, LS4YOU, capsules numériques, carnets Baserriberri).</li>
+            <li><strong>Pilotage transversal entre la direction, les projets et le terrain :</strong> mise en cohérence entre exigences institutionnelles, expérimentations financées et pratiques opérationnelles des conseillers.</li>
+        </ul>
+    </div>
+</div>
+<!-- Modal Tâches principales -->
+<div id="modal-taches-principales" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h3 class="text-2xl font-bold mb-4 text-gradient">🛠️ Tâches principales</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-600">
+            <li><strong>Ingénierie pédagogique :</strong> conception d’outils (fiches méthodologiques, capsules vidéos, guides d’usage) adaptés aux parcours CEJ et PACEA.</li>
+            <li><strong>Animation de la professionnalisation interne :</strong> pilotage de sessions de montée en compétences des conseillers (formations internes, mini-sessions ambassadeurs, ateliers de mutualisation).</li>
+            <li><strong>Capitalisation et diffusion :</strong> gestion de la mémoire organisationnelle via SharePoint.</li>
+            <li><strong>Suivi et reporting projets européens :</strong> consolidation des livrables, tableaux de bord et rapports narratifs/financiers.</li>
+            <li><strong>Organisation des COPIL et ateliers-sprints :</strong> animation de rituels collectifs pour alignement stratégique et production de livrables concrets.</li>
+            <li><strong>Évaluation et ajustement :</strong> suivi des indicateurs CEJ/PACEA, analyse des retours terrain, mise à jour des outils et pratiques.</li>
+        </ul>
+    </div>
+</div>
+<!-- Modal Interactions Direction -->
+<div id="modal-interactions-direction" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h3 class="text-2xl font-bold mb-4 text-gradient">🤝 Interactions avec la Direction</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-600">
+            <li>Transmission régulière de reporting stratégique et financier.</li>
+            <li>Préparation et présentation d’avenants aux conventions et projets.</li>
+            <li>Production de notes stratégiques pour appuyer la prise de décision.</li>
+            <li>Alignement permanent avec la vision institutionnelle.</li>
+        </ul>
+    </div>
+</div>
+<!-- Modal Interactions Ambassadeurs -->
+<div id="modal-interactions-ambassadeurs" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h3 class="text-2xl font-bold mb-4 text-gradient">🤝 Interactions avec les Ambassadeurs territoriaux</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-600">
+            <li>Formation & appui : mise à disposition de kits prêts à l’emploi.</li>
+            <li>Collecte de feedbacks terrain : exploitation des Flash Reports.</li>
+            <li>Animation du réseau d’ambassadeurs.</li>
+            <li>Co-construction : expérimentation locale des outils.</li>
+        </ul>
+    </div>
+</div>
+<!-- Modal Interactions Conseillers -->
+<div id="modal-interactions-conseillers" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h3 class="text-2xl font-bold mb-4 text-gradient">🤝 Interactions avec les Conseillers CEJ/PACEA</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-600">
+            <li>Fourniture d’outils intégrables dans l’accompagnement (diagnostics, ateliers clés en main).</li>
+            <li>Intégration obligatoire d’au moins un outil projet dans chaque parcours CEJ/PACEA.</li>
+            <li>Support opérationnel via helpdesk interne, office hours ou mini-formations flash.</li>
+        </ul>
+    </div>
+</div>
+<!-- Modal Interactions SC/Stagiaires -->
+<div id="modal-interactions-stagiaires" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h3 class="text-2xl font-bold mb-4 text-gradient">🤝 Interactions avec Volontaires SC & Stagiaires</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-600">
+            <li>Contribution documentaire et logistique (rédaction de fiches capitalisation, montage de capsules vidéo).</li>
+            <li>Intégration de témoignages dans les ateliers collectifs.</li>
+            <li>Valorisation comme vecteurs crédibles de transmission auprès des publics.</li>
+        </ul>
+    </div>
+</div>
+<!-- Modal Valeur Ajoutée -->
+<div id="modal-valeur-ajoutee" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h3 class="text-2xl font-bold mb-4 text-gradient">✅ Valeur ajoutée du poste RIO</h3>
+        <ul class="list-disc pl-5 space-y-2 text-slate-600">
+            <li><strong>Sécurisation organisationnelle :</strong> transformation des projets expérimentaux en pratiques durables.</li>
+            <li><strong>Montée en compétence collective :</strong> la professionnalisation devient continue et structurée.</li>
+            <li><strong>Pérennité et traçabilité :</strong> les outils produits et stockés sont accessibles, réutilisables et améliorables.</li>
+            <li><strong>Lien entre innovation et accompagnement de droit commun :</strong> les jeunes bénéficient concrètement des innovations.</li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const sections = document.querySelectorAll('.card');
+        const modals = document.querySelectorAll('.modal');
+        const closeButtons = document.querySelectorAll('.close-button');
+        const modalMap = {
+            'role-strategique': 'modal-role-strategique',
+            'attributions-strategiques': 'modal-attributions-strategiques',
+            'taches-principales': 'modal-taches-principales',
+            'interactions-direction': 'modal-interactions-direction',
+            'interactions-ambassadeurs': 'modal-interactions-ambassadeurs',
+            'interactions-conseillers': 'modal-interactions-conseillers',
+            'interactions-stagiaires': 'modal-interactions-stagiaires',
+            'valeur-ajoutee': 'modal-valeur-ajoutee'
+        };
+        sections.forEach(section => {
+            section.addEventListener('click', () => {
+                const modalId = modalMap[section.id];
+                const modal = document.getElementById(modalId);
+                if (modal) {
+                    modal.style.display = 'flex';
+                }
+            });
+        });
+        closeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const modal = button.closest('.modal');
+                if (modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+        window.addEventListener('click', (event) => {
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
