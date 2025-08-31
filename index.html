@@ -52,6 +52,8 @@
             border-radius: 1rem;
             width: 90%;
             max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
             position: relative;
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.25);
         }
@@ -72,19 +74,19 @@
 <body class="bg-gray-100 text-slate-700">
 <div class="container p-4 md:p-8">
     <div class="text-center mb-12">
-        <h1 class="text-3xl md:text-5xl font-bold text-gradient">Fiche Fonctionnelle : Responsable Innovation, Professionnalisation & Outillage (RIO)</h1>
+        <h1 class="text-3xl md:text-5xl font-bold text-gradient">Fiche Fonctionnelle : Coordinateur Innovation, Professionnalisation & Outillage</h1>
         <p class="text-lg md:text-xl text-slate-500 mt-2">Mission Locale Pays Basque</p>
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
         <!-- Rôle Stratégique -->
         <div id="role-strategique" class="card bg-purple-100/50 hover:bg-purple-100">
             <h2 class="text-2xl font-bold text-purple-700 mb-2">🎯 Rôle stratégique</h2>
-            <p class="text-slate-600">Le RIO est une fonction pivot, en lien direct avec la Direction et les équipes terrain, pour structurer l'accompagnement socio-professionnel.</p>
+            <p class="text-slate-600">Le Coordinateur est une fonction pivot, en lien direct avec la Direction et les équipes terrain, pour structurer l'accompagnement socio-professionnel.</p>
         </div>
         <!-- Attributions Stratégiques -->
         <div id="attributions-strategiques" class="card bg-orange-100/50 hover:bg-orange-100">
             <h2 class="text-2xl font-bold text-orange-700 mb-2">🌟 4 Attributions stratégiques</h2>
-            <p class="text-slate-600">Cliquez pour voir les quatre attributions principales qui guident les actions du RIO.</p>
+            <p class="text-slate-600">Cliquez pour voir les quatre attributions principales qui guident les actions du Coordinateur.</p>
         </div>
         <!-- Tâches principales -->
         <div id="taches-principales" class="card bg-lime-100/50 hover:bg-lime-100">
@@ -93,174 +95,264 @@
         </div>
         <!-- Interactions Direction -->
         <div id="interactions-direction" class="card bg-indigo-100/50 hover:bg-indigo-100">
-            <h2 class="text-2xl font-bold text-indigo-700 mb-2">🤝 Interactions avec la Direction</h2>
-            <p class="text-slate-600">Le RIO est le lien stratégique avec la Direction. Voir les détails.</p>
+            <h2 class="text-2xl font-bold text-indigo-700 mb-2">🤝 Interactions Direction</h2>
+            <p class="text-slate-600">Explorez les liens fonctionnels et hiérarchiques avec la Direction Générale et les autres services.</p>
         </div>
-        <!-- Interactions Ambassadeurs -->
-        <div id="interactions-ambassadeurs" class="card bg-sky-100/50 hover:bg-sky-100">
-            <h2 class="text-2xl font-bold text-sky-700 mb-2">🤝 Interactions avec les Ambassadeurs</h2>
-            <p class="text-slate-600">Le RIO forme et s'appuie sur ce réseau pour diffuser les bonnes pratiques.</p>
+        <!-- Processus clés -->
+        <div id="processus-cles" class="card bg-emerald-100/50 hover:bg-emerald-100">
+            <h2 class="text-2xl font-bold text-emerald-700 mb-2">⚙️ Processus clés de l'écosystème</h2>
+            <p class="text-slate-600">Découvrez les 6 processus fondamentaux qui structurent l'action du Coordinateur.</p>
         </div>
-        <!-- Interactions Conseillers -->
-        <div id="interactions-conseillers" class="card bg-teal-100/50 hover:bg-teal-100">
-            <h2 class="text-2xl font-bold text-teal-700 mb-2">🤝 Interactions avec les Conseillers</h2>
-            <p class="text-slate-600">Le rôle du RIO dans l'accompagnement des conseillers CEJ/PACEA.</p>
-        </div>
-        <!-- Interactions SC/Stagiaires -->
-        <div id="interactions-stagiaires" class="card bg-fuchsia-100/50 hover:bg-fuchsia-100">
-            <h2 class="text-2xl font-bold text-fuchsia-700 mb-2">🤝 Interactions avec Volontaires SC & Stagiaires</h2>
-            <p class="text-slate-600">Comment le RIO collabore avec les jeunes en mission pour la capitalisation.</p>
-        </div>
-        <!-- Valeur Ajoutée -->
-        <div id="valeur-ajoutee" class="card bg-emerald-100/50 hover:bg-emerald-100 col-span-1 md:col-span-2 lg:col-span-1">
-            <h2 class="text-2xl font-bold text-emerald-700 mb-2">✅ Valeur ajoutée du poste</h2>
-            <p class="text-slate-600">Le RIO assure la durabilité et la professionnalisation des actions de l'organisation.</p>
+        <!-- Outils à construire -->
+        <div id="outils-construire" class="card bg-rose-100/50 hover:bg-rose-100">
+            <h2 class="text-2xl font-bold text-rose-700 mb-2">🔧 Outils à construire</h2>
+            <p class="text-slate-600">Synthèse des outils stratégiques à développer pour optimiser l'accompagnement.</p>
         </div>
     </div>
 </div>
 
-<!-- Modals for each section -->
+<!-- Modals -->
 <!-- Modal Rôle Stratégique -->
 <div id="modal-role-strategique" class="modal">
     <div class="modal-content">
-        <span class="close-button">&times;</span>
-        <h3 class="text-2xl font-bold mb-4 text-gradient">🎯 Rôle stratégique</h3>
-        <p class="text-slate-600 mb-4">Le Responsable Innovation, Professionnalisation & Outillage (RIO) occupe une fonction pivot au sein de la Mission Locale, en articulation directe avec la Direction et les relais territoriaux.</p>
-        <p class="text-slate-600">Il assume une mission transversale de structuration, outillage et professionnalisation de l’accompagnement socio-professionnel, en cohérence avec la feuille de route nationale (UNML, CEJ/PACEA, Pacte d’Ambition) et les opportunités offertes par les financements européens (Erasmus+, FSE+, POCTEFA).</p>
+        <span class="close-button" onclick="closeModal('modal-role-strategique')">&times;</span>
+        <h2 class="text-3xl font-bold text-purple-700 mb-4">🎯 Rôle stratégique</h2>
+        <div class="space-y-4">
+            <p class="text-lg">Le Coordinateur Innovation, Professionnalisation & Outillage occupe une position centrale dans l'organisation, agissant comme un pont entre la vision stratégique de la direction et la réalité opérationnelle du terrain.</p>
+            <div class="bg-purple-50 p-4 rounded-lg">
+                <h3 class="font-semibold text-purple-800 mb-2">Mission principale :</h3>
+                <p>Structurer et optimiser l'accompagnement socio-professionnel des jeunes en situation de vulnérabilité, en développant des outils innovants et des méthodes adaptées aux enjeux contemporains.</p>
+            </div>
+            <ul class="list-disc list-inside space-y-2 text-slate-600">
+                <li>Interface privilégiée entre la Direction et les équipes terrain</li>
+                <li>Garant de la cohérence des pratiques professionnelles</li>
+                <li>Moteur de l'innovation dans l'accompagnement</li>
+                <li>Facilitateur de la montée en compétences des équipes</li>
+            </ul>
+        </div>
     </div>
 </div>
+
 <!-- Modal Attributions Stratégiques -->
 <div id="modal-attributions-strategiques" class="modal">
     <div class="modal-content">
-        <span class="close-button">&times;</span>
-        <h3 class="text-2xl font-bold mb-4 text-gradient">🌟 4 Attributions stratégiques</h3>
-        <ul class="list-disc pl-5 space-y-2 text-slate-600">
-            <li><strong>Conception et capitalisation des outils d’accompagnement :</strong> transformation des projets expérimentaux en livrables duplicables (fiches, grilles, capsules, carnets de capitalisation).</li>
-            <li><strong>Garantie de la professionnalisation interne :</strong> animation de sessions collectives, organisation d’ateliers-sprints, transmission de bonnes pratiques, intégration de l’approche compétences (Life Skills, ADVP, CEP 2.0).</li>
-            <li><strong>Intégration systématique des projets européens dans le droit commun CEJ/PACEA :</strong> obligation d’inclure au moins un outil innovant dans chaque parcours jeune (diagnostic mobilité, LS4YOU, capsules numériques, carnets Baserriberri).</li>
-            <li><strong>Pilotage transversal entre la direction, les projets et le terrain :</strong> mise en cohérence entre exigences institutionnelles, expérimentations financées et pratiques opérationnelles des conseillers.</li>
-        </ul>
+        <span class="close-button" onclick="closeModal('modal-attributions-strategiques')">&times;</span>
+        <h2 class="text-3xl font-bold text-orange-700 mb-4">🌟 4 Attributions stratégiques</h2>
+        <div class="grid gap-6">
+            <div class="bg-orange-50 p-4 rounded-lg">
+                <h3 class="font-bold text-orange-800 mb-2">1. Innovation & Développement</h3>
+                <p>Concevoir et déployer des solutions innovantes pour l'accompagnement des jeunes, en s'appuyant sur les nouvelles technologies et les méthodes émergentes.</p>
+            </div>
+            <div class="bg-orange-50 p-4 rounded-lg">
+                <h3 class="font-bold text-orange-800 mb-2">2. Professionnalisation</h3>
+                <p>Structurer les parcours de formation et de développement des compétences des conseillers, garantir la qualité des pratiques professionnelles.</p>
+            </div>
+            <div class="bg-orange-50 p-4 rounded-lg">
+                <h3 class="font-bold text-orange-800 mb-2">3. Outillage & Méthodes</h3>
+                <p>Développer, tester et déployer les outils d'accompagnement, créer des référentiels méthodologiques adaptés aux besoins du terrain.</p>
+            </div>
+            <div class="bg-orange-50 p-4 rounded-lg">
+                <h3 class="font-bold text-orange-800 mb-2">4. Coordination Transversale</h3>
+                <p>Assurer la cohérence des actions entre les différents services, faciliter les synergies et optimiser les ressources disponibles.</p>
+            </div>
+        </div>
     </div>
 </div>
-<!-- Modal Tâches principales -->
+
+<!-- Modal Tâches Principales -->
 <div id="modal-taches-principales" class="modal">
     <div class="modal-content">
-        <span class="close-button">&times;</span>
-        <h3 class="text-2xl font-bold mb-4 text-gradient">🛠️ Tâches principales</h3>
-        <ul class="list-disc pl-5 space-y-2 text-slate-600">
-            <li><strong>Ingénierie pédagogique :</strong> conception d’outils (fiches méthodologiques, capsules vidéos, guides d’usage) adaptés aux parcours CEJ et PACEA.</li>
-            <li><strong>Animation de la professionnalisation interne :</strong> pilotage de sessions de montée en compétences des conseillers (formations internes, mini-sessions ambassadeurs, ateliers de mutualisation).</li>
-            <li><strong>Capitalisation et diffusion :</strong> gestion de la mémoire organisationnelle via SharePoint.</li>
-            <li><strong>Suivi et reporting projets européens :</strong> consolidation des livrables, tableaux de bord et rapports narratifs/financiers.</li>
-            <li><strong>Organisation des COPIL et ateliers-sprints :</strong> animation de rituels collectifs pour alignement stratégique et production de livrables concrets.</li>
-            <li><strong>Évaluation et ajustement :</strong> suivi des indicateurs CEJ/PACEA, analyse des retours terrain, mise à jour des outils et pratiques.</li>
-        </ul>
+        <span class="close-button" onclick="closeModal('modal-taches-principales')">&times;</span>
+        <h2 class="text-3xl font-bold text-lime-700 mb-4">🛠️ Tâches principales</h2>
+        <div class="space-y-6">
+            <div class="bg-lime-50 p-4 rounded-lg">
+                <h3 class="font-bold text-lime-800 mb-3">Ingénierie & Conception</h3>
+                <ul class="list-disc list-inside space-y-1 text-slate-600">
+                    <li>Analyser les besoins du terrain et identifier les axes d'amélioration</li>
+                    <li>Concevoir des outils d'accompagnement innovants</li>
+                    <li>Élaborer des référentiels méthodologiques</li>
+                    <li>Piloter des projets d'expérimentation</li>
+                </ul>
+            </div>
+            <div class="bg-lime-50 p-4 rounded-lg">
+                <h3 class="font-bold text-lime-800 mb-3">Animation & Formation</h3>
+                <ul class="list-disc list-inside space-y-1 text-slate-600">
+                    <li>Animer des sessions de formation pour les conseillers</li>
+                    <li>Organiser des ateliers de co-développement</li>
+                    <li>Faciliter les échanges de pratiques</li>
+                    <li>Accompagner la prise en main de nouveaux outils</li>
+                </ul>
+            </div>
+            <div class="bg-lime-50 p-4 rounded-lg">
+                <h3 class="font-bold text-lime-800 mb-3">Suivi & Évaluation</h3>
+                <ul class="list-disc list-inside space-y-1 text-slate-600">
+                    <li>Mesurer l'impact des innovations déployées</li>
+                    <li>Analyser les retours d'expérience</li>
+                    <li>Ajuster les méthodes selon les résultats</li>
+                    <li>Produire des bilans et recommandations</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
+
 <!-- Modal Interactions Direction -->
 <div id="modal-interactions-direction" class="modal">
     <div class="modal-content">
-        <span class="close-button">&times;</span>
-        <h3 class="text-2xl font-bold mb-4 text-gradient">🤝 Interactions avec la Direction</h3>
-        <ul class="list-disc pl-5 space-y-2 text-slate-600">
-            <li>Transmission régulière de reporting stratégique et financier.</li>
-            <li>Préparation et présentation d’avenants aux conventions et projets.</li>
-            <li>Production de notes stratégiques pour appuyer la prise de décision.</li>
-            <li>Alignement permanent avec la vision institutionnelle.</li>
-        </ul>
+        <span class="close-button" onclick="closeModal('modal-interactions-direction')">&times;</span>
+        <h2 class="text-3xl font-bold text-indigo-700 mb-4">🤝 Interactions Direction</h2>
+        <div class="space-y-6">
+            <div class="bg-indigo-50 p-4 rounded-lg">
+                <h3 class="font-bold text-indigo-800 mb-3">Lien hiérarchique</h3>
+                <p class="text-slate-600">Rattachement direct à la Direction Générale avec une autonomie opérationnelle dans la conduite des projets d'innovation et de professionnalisation.</p>
+            </div>
+            <div class="bg-indigo-50 p-4 rounded-lg">
+                <h3 class="font-bold text-indigo-800 mb-3">Relations fonctionnelles</h3>
+                <ul class="list-disc list-inside space-y-1 text-slate-600">
+                    <li>Collaboration étroite avec les responsables de secteur</li>
+                    <li>Interface avec les partenaires institutionnels</li>
+                    <li>Coordination avec les services support (RH, communication)</li>
+                    <li>Échanges réguliers avec le réseau national des Missions Locales</li>
+                </ul>
+            </div>
+            <div class="bg-indigo-50 p-4 rounded-lg">
+                <h3 class="font-bold text-indigo-800 mb-3">Modalités de reporting</h3>
+                <ul class="list-disc list-inside space-y-1 text-slate-600">
+                    <li>Points hebdomadaires avec la Direction</li>
+                    <li>Bilans mensuels d'activité</li>
+                    <li>Présentation trimestrielle des innovations</li>
+                    <li>Participation aux comités de direction</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
-<!-- Modal Interactions Ambassadeurs -->
-<div id="modal-interactions-ambassadeurs" class="modal">
+
+<!-- Modal Processus Clés -->
+<div id="modal-processus-cles" class="modal">
     <div class="modal-content">
-        <span class="close-button">&times;</span>
-        <h3 class="text-2xl font-bold mb-4 text-gradient">🤝 Interactions avec les Ambassadeurs territoriaux</h3>
-        <ul class="list-disc pl-5 space-y-2 text-slate-600">
-            <li>Formation & appui : mise à disposition de kits prêts à l’emploi.</li>
-            <li>Collecte de feedbacks terrain : exploitation des Flash Reports.</li>
-            <li>Animation du réseau d’ambassadeurs.</li>
-            <li>Co-construction : expérimentation locale des outils.</li>
-        </ul>
+        <span class="close-button" onclick="closeModal('modal-processus-cles')">&times;</span>
+        <h2 class="text-3xl font-bold text-emerald-700 mb-4">⚙️ Processus clés de l'écosystème</h2>
+        <div class="space-y-4">
+            <div class="bg-emerald-50 p-4 rounded-lg">
+                <h3 class="font-bold text-emerald-800 mb-2">1. Pilotage stratégique</h3>
+                <p class="text-slate-600">Définition des orientations, planification des actions et coordination des ressources pour atteindre les objectifs fixés.</p>
+            </div>
+            <div class="bg-emerald-50 p-4 rounded-lg">
+                <h3 class="font-bold text-emerald-800 mb-2">2. Conception & outillage</h3>
+                <p class="text-slate-600">Développement d'outils innovants et de méthodologies adaptées aux besoins spécifiques de l'accompagnement.</p>
+            </div>
+            <div class="bg-emerald-50 p-4 rounded-lg">
+                <h3 class="font-bold text-emerald-800 mb-2">3. Diffusion & appropriation</h3>
+                <p class="text-slate-600">Déploiement des outils et méthodes auprès des équipes, accompagnement de leur prise en main et appropriation.</p>
+            </div>
+            <div class="bg-emerald-50 p-4 rounded-lg">
+                <h3 class="font-bold text-emerald-800 mb-2">4. Communication & circulation</h3>
+                <p class="text-slate-600">Facilitation des échanges d'informations et de bonnes pratiques entre les différents acteurs de l'écosystème.</p>
+            </div>
+            <div class="bg-emerald-50 p-4 rounded-lg">
+                <h3 class="font-bold text-emerald-800 mb-2">5. Décision par subsidiarité</h3>
+                <p class="text-slate-600">Délégation des décisions au niveau le plus pertinent, favorisant l'autonomie et la responsabilisation des équipes.</p>
+            </div>
+            <div class="bg-emerald-50 p-4 rounded-lg">
+                <h3 class="font-bold text-emerald-800 mb-2">6. Évaluation & amélioration continue</h3>
+                <p class="text-slate-600">Mesure de l'efficacité des actions, analyse des résultats et ajustement permanent des pratiques.</p>
+            </div>
+        </div>
     </div>
 </div>
-<!-- Modal Interactions Conseillers -->
-<div id="modal-interactions-conseillers" class="modal">
+
+<!-- Modal Outils à Construire -->
+<div id="modal-outils-construire" class="modal">
     <div class="modal-content">
-        <span class="close-button">&times;</span>
-        <h3 class="text-2xl font-bold mb-4 text-gradient">🤝 Interactions avec les Conseillers CEJ/PACEA</h3>
-        <ul class="list-disc pl-5 space-y-2 text-slate-600">
-            <li>Fourniture d’outils intégrables dans l’accompagnement (diagnostics, ateliers clés en main).</li>
-            <li>Intégration obligatoire d’au moins un outil projet dans chaque parcours CEJ/PACEA.</li>
-            <li>Support opérationnel via helpdesk interne, office hours ou mini-formations flash.</li>
-        </ul>
-    </div>
-</div>
-<!-- Modal Interactions SC/Stagiaires -->
-<div id="modal-interactions-stagiaires" class="modal">
-    <div class="modal-content">
-        <span class="close-button">&times;</span>
-        <h3 class="text-2xl font-bold mb-4 text-gradient">🤝 Interactions avec Volontaires SC & Stagiaires</h3>
-        <ul class="list-disc pl-5 space-y-2 text-slate-600">
-            <li>Contribution documentaire et logistique (rédaction de fiches capitalisation, montage de capsules vidéo).</li>
-            <li>Intégration de témoignages dans les ateliers collectifs.</li>
-            <li>Valorisation comme vecteurs crédibles de transmission auprès des publics.</li>
-        </ul>
-    </div>
-</div>
-<!-- Modal Valeur Ajoutée -->
-<div id="modal-valeur-ajoutee" class="modal">
-    <div class="modal-content">
-        <span class="close-button">&times;</span>
-        <h3 class="text-2xl font-bold mb-4 text-gradient">✅ Valeur ajoutée du poste RIO</h3>
-        <ul class="list-disc pl-5 space-y-2 text-slate-600">
-            <li><strong>Sécurisation organisationnelle :</strong> transformation des projets expérimentaux en pratiques durables.</li>
-            <li><strong>Montée en compétence collective :</strong> la professionnalisation devient continue et structurée.</li>
-            <li><strong>Pérennité et traçabilité :</strong> les outils produits et stockés sont accessibles, réutilisables et améliorables.</li>
-            <li><strong>Lien entre innovation et accompagnement de droit commun :</strong> les jeunes bénéficient concrètement des innovations.</li>
-        </ul>
+        <span class="close-button" onclick="closeModal('modal-outils-construire')">&times;</span>
+        <h2 class="text-3xl font-bold text-rose-700 mb-4">🔧 Synthèse des Outils à Construire</h2>
+        <div class="space-y-6">
+            <div class="bg-rose-50 p-4 rounded-lg">
+                <h3 class="font-bold text-rose-800 mb-3">Outils de pilotage stratégique</h3>
+                <ul class="list-disc list-inside space-y-1 text-slate-600">
+                    <li>Tableau de bord stratégique et indicateurs de performance</li>
+                    <li>Système de planification et de suivi des projets</li>
+                    <li>Outils de cartographie des compétences et des besoins</li>
+                </ul>
+            </div>
+            <div class="bg-rose-50 p-4 rounded-lg">
+                <h3 class="font-bold text-rose-800 mb-3">Outils de conception & outillage</h3>
+                <ul class="list-disc list-inside space-y-1 text-slate-600">
+                    <li>Plateforme collaborative de co-création d'outils</li>
+                    <li>Référentiels méthodologiques et guides pratiques</li>
+                    <li>Kits d'animation et supports pédagogiques</li>
+                </ul>
+            </div>
+            <div class="bg-rose-50 p-4 rounded-lg">
+                <h3 class="font-bold text-rose-800 mb-3">Outils de diffusion & appropriation</h3>
+                <ul class="list-disc list-inside space-y-1 text-slate-600">
+                    <li>Plateforme de formation en ligne et ressources</li>
+                    <li>Système de mentorat et d'accompagnement pair-à-pair</li>
+                    <li>Outils de suivi de l'appropriation des innovations</li>
+                </ul>
+            </div>
+            <div class="bg-rose-50 p-4 rounded-lg">
+                <h3 class="font-bold text-rose-800 mb-3">Outils de communication & circulation</h3>
+                <ul class="list-disc list-inside space-y-1 text-slate-600">
+                    <li>Réseau social interne et espaces d'échange</li>
+                    <li>Système de capitalisation des bonnes pratiques</li>
+                    <li>Outils de veille et de partage d'informations</li>
+                </ul>
+            </div>
+            <div class="bg-rose-50 p-4 rounded-lg">
+                <h3 class="font-bold text-rose-800 mb-3">Outils d'évaluation & amélioration</h3>
+                <ul class="list-disc list-inside space-y-1 text-slate-600">
+                    <li>Système d'évaluation de l'impact des innovations</li>
+                    <li>Outils de feedback et de retour d'expérience</li>
+                    <li>Mécanismes d'amélioration continue et d'ajustement</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const sections = document.querySelectorAll('.card');
-        const modals = document.querySelectorAll('.modal');
-        const closeButtons = document.querySelectorAll('.close-button');
-        const modalMap = {
-            'role-strategique': 'modal-role-strategique',
-            'attributions-strategiques': 'modal-attributions-strategiques',
-            'taches-principales': 'modal-taches-principales',
-            'interactions-direction': 'modal-interactions-direction',
-            'interactions-ambassadeurs': 'modal-interactions-ambassadeurs',
-            'interactions-conseillers': 'modal-interactions-conseillers',
-            'interactions-stagiaires': 'modal-interactions-stagiaires',
-            'valeur-ajoutee': 'modal-valeur-ajoutee'
-        };
-        sections.forEach(section => {
-            section.addEventListener('click', () => {
-                const modalId = modalMap[section.id];
-                const modal = document.getElementById(modalId);
-                if (modal) {
-                    modal.style.display = 'flex';
-                }
-            });
-        });
-        closeButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const modal = button.closest('.modal');
-                if (modal) {
-                    modal.style.display = 'none';
-                }
-            });
-        });
-        window.addEventListener('click', (event) => {
+    // Fonction pour ouvrir une modal
+    function openModal(modalId) {
+        document.getElementById(modalId).style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // Empêche le scroll de la page
+    }
+
+    // Fonction pour fermer une modal
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = 'none';
+        document.body.style.overflow = 'auto'; // Réactive le scroll de la page
+    }
+
+    // Ajout des événements de clic sur les cartes
+    document.getElementById('role-strategique').addEventListener('click', () => openModal('modal-role-strategique'));
+    document.getElementById('attributions-strategiques').addEventListener('click', () => openModal('modal-attributions-strategiques'));
+    document.getElementById('taches-principales').addEventListener('click', () => openModal('modal-taches-principales'));
+    document.getElementById('interactions-direction').addEventListener('click', () => openModal('modal-interactions-direction'));
+    document.getElementById('processus-cles').addEventListener('click', () => openModal('modal-processus-cles'));
+    document.getElementById('outils-construire').addEventListener('click', () => openModal('modal-outils-construire'));
+
+    // Fermer la modal en cliquant à l'extérieur
+    window.addEventListener('click', (event) => {
+        if (event.target.classList.contains('modal')) {
+            event.target.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    // Fermer la modal avec la touche Échap
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            const modals = document.querySelectorAll('.modal');
             modals.forEach(modal => {
-                if (event.target === modal) {
+                if (modal.style.display === 'flex') {
                     modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
                 }
             });
-        });
+        }
     });
 </script>
-</body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'977a926f150ed5c5',t:'MTc1NjYyMjc5OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
